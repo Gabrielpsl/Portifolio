@@ -1,0 +1,247 @@
+/* Importações de Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* ------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: rgb(10,9,11);
+    background: linear-gradient(145deg, rgba(10,9,11,0.9948354341736695) 2%, rgba(128,0,255,1) 89%);57%, rgba(0,212,255,1) 100%);
+    min-height: 100vh;
+}
+
+.container{
+
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+     
+ }
+
+.header-all {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px;
+
+}
+
+.navigation {
+    
+    
+}
+
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 67px;
+}
+
+.navigation ul li {
+    list-style: none;
+    gap: 67px;
+}
+
+.navigation ul li a{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    transition: 0.3s;
+
+        &:hover {
+            color:rgba(128,0,255,1) ;
+            
+        }
+}
+
+.icons {
+    display: flex;
+    gap: 30px;
+}
+
+.icons a {
+    
+}
+
+.icons i {
+    color: aliceblue;
+    font-size: 30px;
+    transition: 0.3s;
+
+    &:hover {
+        color:rgba(128,0,255,1) ;
+        
+    }
+
+
+}
+
+/* conteudo principal */
+
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 35px;
+
+}
+
+.left-side {
+
+}
+
+.left-side h1 {
+    color: #0EE6B7;
+    font-family: Poppins;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;    
+}
+
+.left-side h2 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.left-side p {
+    
+    font-family: Poppins;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+}
+
+.rainbow-text {
+    /* Create a conic gradient. */
+    /* Double percentages to avoid blur (#000 10%, #fff 10%, #fff 20%, ...). */
+    background: #CA4246;
+    background-color: #CA4246;
+    background: conic-gradient(
+      #CA4246 16.666%, 
+      #E16541 16.666%, 
+      #E16541 33.333%, 
+      #F18F43 33.333%, 
+      #F18F43 50%, 
+      #8B9862 50%, 
+      #8B9862 66.666%, 
+      #476098 66.666%, 
+      #476098 83.333%, 
+      #A7489B 83.333%);
+    
+    /* Set thee background size and repeat properties. */
+    background-size: 57%;
+    background-repeat: repeat;
+    
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    
+    /* Animate the text when loading the element. */
+    /* This animates it on page load and when hovering out. */
+    animation: rainbow-text-animation-rev 0.5s ease forwards;
+  
+    cursor: pointer;
+  }
+  
+  /* Add animation on hover. */
+  .rainbow-text:hover {
+    animation: rainbow-text-animation 0.5s ease forwards;
+  }
+
+
+.right-side img {
+    width: 750px;
+    
+}
+
+
+
+
+.triangle {
+    animation: float 10s ease-in-out infinite;
+    transition: ease-in-out .5s;
+  }
+
+@keyframes float {
+    0% {
+      transform: translatey(0);
+    }
+
+    25% {
+        transform: translateX(10px);
+    }
+
+    50% {
+      transform: translatey(-20px);
+    }
+
+    75% {
+        transform: translateX(-10px);
+    }
+    100% {
+      transform: translatey(0);
+    }
+  }
+
+  @keyframes rainbow-text-animation {
+    0% {
+      background-size: 57%;
+      background-position: 0 0;
+    }
+    20% {
+      background-size: 57%;
+      background-position: 0 1em;
+    }
+    100% {
+      background-size: 300%;
+      background-position: -9em 1em;
+    }
+  }
+  
+  /* Move the background and make it smaller. */
+  /* Animation shown when entering the page and after the hover animation. */
+  @keyframes rainbow-text-animation-rev {
+    0% {
+      background-size: 300%;
+      background-position: -9em 1em;
+    }
+    20% {
+      background-size: 57%;
+      background-position: 0 1em;
+    }
+    100% {
+      background-size: 57%;
+      background-position: 0 0;
+    }
+  }
+
+
